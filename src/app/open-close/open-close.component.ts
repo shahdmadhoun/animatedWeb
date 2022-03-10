@@ -46,12 +46,6 @@ import { trigger, state, style, animate, transition, // ...
   styleUrls: ['open-close.component.css']
 })
 export class OpenCloseComponent {
-  isOpen = true;
   public isMenuCollapsed = true;
-
-
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
 
 }

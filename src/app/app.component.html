@@ -1,2 +1,5 @@
 <app-open-close></app-open-close>
-<router-outlet></router-outlet>
+<div class="router-containor" [@router] = "prepareRoute(outlet)">
+    <router-outlet #outlet = "outlet"></router-outlet>
+</div>
+<app-footer></app-footer>

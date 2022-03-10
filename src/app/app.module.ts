@@ -10,6 +10,8 @@ import { CoverPhotoComponent } from './cover-photo/cover-photo.component';
 import { ProductsTypesComponent } from './products-types/products-types.component';
 import { BestSelerComponent } from './best-seler/best-seler.component';
 import { CreamTypesComponent } from './cream-types/cream-types.component';
+import { FooterComponent } from './footer/footer.component';
+import { ShopComponent } from './shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CreamTypesComponent } from './cream-types/cream-types.component';
     CoverPhotoComponent,
     ProductsTypesComponent,
     BestSelerComponent,
-    CreamTypesComponent
+    CreamTypesComponent,
+    FooterComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
