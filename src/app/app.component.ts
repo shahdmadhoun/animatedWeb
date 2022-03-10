@@ -16,30 +16,49 @@ import { bufferToggle } from 'rxjs';
 
     trigger('router', [
       transition('* => *', [
-        query(':enter', [
+        style({
+          position:'relative',
+          // overflow: 'hidden'
+        }),
+        query(':enter, :leave', [
           style({
-            opacity: 0,
-          }),
+            position: 'absolute',
+            top:0,
+            left:0,
+            width:'100%',
+            hight: '100%'
+          })
         ], { optional:true }),
-        query(':leave', [
-          style({
-            display: 'block'
-          }),
-          animate(1000, style({
-            opacity: 0
-          }))
-        ], { optional: true }),
+        // query(':enter', [
+        //   style({
+        //     opacity: 0,
+        //   }),
+        // ], { optional:true }),
 
-        query(':enter', [
-          style({
-            opacity: 0,
-            height: '100%',
-            display: 'block'
-          }),
-          animate(1000, style({
-            opacity: 1
-          }))
-        ], { optional: true }),
+        group([
+          query(':leave', [
+            style({
+              display: 'block'
+            }),
+            animate(1000, style({
+              opacity: 0,
+              tranform: 'translateX(-80px)'
+            }))
+          ], { optional: true }),
+          query(':enter', [
+            style({
+              tranform: 'translateX(80px)',
+              opacity: 0,
+
+            }),
+            animate(1000, style({
+              opacity: 1,
+              tranform: 'translateX(0)'
+
+            }))
+          ], { optional: true }),
+        ]),
+
       ]),
     ]),
   ],
