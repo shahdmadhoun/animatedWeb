@@ -12,6 +12,7 @@ import { BestSelerComponent } from './best-seler/best-seler.component';
 import { CreamTypesComponent } from './cream-types/cream-types.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShopComponent } from './shop/shop.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ShopComponent } from './shop/shop.component';
     BestSelerComponent,
     CreamTypesComponent,
     FooterComponent,
-    ShopComponent
+    ShopComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
