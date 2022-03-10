@@ -1,0 +1,14 @@
+.card {
+    position: relative;
+    text-align: center;
+    border: 0px;
+    padding: 4px 2px;
+}
+
+.back-color {
+    background-color: rgba(0, 0, 0, 0.479);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

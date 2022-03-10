@@ -1,9 +1,9 @@
-import { Component,  HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, // ... 
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-open-close',
   animations: [
     trigger('openClose', [
       // ...
@@ -42,10 +42,16 @@ import { trigger, state, style, animate, transition, // ...
       ]),  
     ]),
   ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-
+  templateUrl: 'open-close.component.html',
+  styleUrls: ['open-close.component.css']
 })
-export class AppComponent {
-  title = 'animatedWeb';
+export class OpenCloseComponent {
+  isOpen = true;
+  public isMenuCollapsed = true;
+
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+  }
+
 }

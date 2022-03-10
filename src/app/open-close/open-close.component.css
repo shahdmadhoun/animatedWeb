@@ -1,0 +1,25 @@
+:host {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .open-close-container {
+    border: 1px solid #dddddd;
+    margin-top: 1em;
+    padding: 20px 20px 0px 20px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.insta-color {
+  /* background-color: linear-gradient(#000000, #b65616 49.9%, #1a700f 50.1%, #f89500 100%); */
+
+  color: #f07726;
+}
