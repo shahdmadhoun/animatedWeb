@@ -7,40 +7,27 @@ import { bufferToggle } from 'rxjs';
 @Component({
   selector: 'app-root',
   animations: [
-    trigger('inOutActiveItemAnimation', [
-      state('0', style({ transform: 'translateX(100%)' })),
-      state('1', style({ transform: 'translateX(100%)' })),
-      transition(':enter', [animate('600ms ease-in-out')]),
-      transition(':leave', [animate('750ms ease-in-out')]),
-    ]),
-
     trigger('router', [
       transition('* => *', [
         style({
           position:'relative',
-          // overflow: 'hidden'
+          overflow: 'hidden'
         }),
         query(':enter, :leave', [
           style({
-            position: 'absolute',
-            top:0,
-            left:0,
+            //position: 'absolute',
+            // top:0,
+            // left:0,
             width:'100%',
             hight: '100%'
           })
         ], { optional:true }),
-        // query(':enter', [
-        //   style({
-        //     opacity: 0,
-        //   }),
-        // ], { optional:true }),
-
         group([
           query(':leave', [
             style({
               display: 'block'
             }),
-            animate(1000, style({
+            animate(500, style({
               opacity: 0,
               tranform: 'translateX(-80px)'
             }))
@@ -51,7 +38,7 @@ import { bufferToggle } from 'rxjs';
               opacity: 0,
 
             }),
-            animate(1000, style({
+            animate(500, style({
               opacity: 1,
               tranform: 'translateX(0)'
 
